@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - PRIEST</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="Logo" href="img/logo.jpeg">
+    <link rel="stylesheet" href="checkout-styles.css">
+    <script src="https://js.paystack.co/v1/inline.js"></script>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">PRIEST</a>
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="shop.html" class="nav-link">Shop</a>
+                    <a href="about.html" class="nav-link">About</a>
+                </div>
+                <div class="nav-actions">
+                    <div class="user-menu" id="userMenu">
+                        <button class="user-button" id="userButton">Login</button>
+                        <div class="user-dropdown" id="userDropdown"></div>
+                    </div>
+                    <a href="cart.html" class="cart-link">
+                        <svg class="cart-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 2L7.17 4H3a1 1 0 00-1 1v12a1 1 0 001 1h18a1 1 0 001-1V5a1 1 0 00-1-1h-4.17L15 2H9z"/>
+                            <path d="M9 17v-6M15 17v-6"/>
+                        </svg>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container checkout-container">
+            <h1 class="checkout-title">Checkout</h1>
+
+            <div class="checkout-grid">
+                <form id="checkoutForm" class="checkout-form">
+                    <div class="form-section">
+                        <h2 class="section-title">Contact Information</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Full Name *</label>
+                                <input type="text" name="name" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Email Address *</label>
+                                <input type="email" name="email" class="form-input" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Phone Number *</label>
+                                <input type="tel" name="phone" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Gender *</label>
+                                <select name="gender" class="form-select" required>
+                                    <option value="">Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                    <option value="prefer-not-to-say">Prefer not to say</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2 class="section-title">Shipping Address</h2>
+                        <div class="form-group">
+                            <label class="form-label"> Town *</label>
+                            <input type="text" name="address" class="form-input" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">City *</label>
+                                <input type="text" name="city" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Region *</label>
+                                <input type="text" name="state" class="form-input" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Postal Code *</label>
+                                <input type="text" name="zipCode" class="form-input" optional>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Country *</label>
+                                <input type="text" name="country" class="form-input" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="payment-info">
+                        <h2 class="section-title">Payment Information</h2>
+                        <p class="payment-subtitle">Secure payment powered by Paystack</p>
+                        <p class="payment-methods">We accept Visa, Mastercard, Verve, Bank Transfer, and Mobile Money</p>
+                    </div>
+
+                    <button type="submit" class="pay-button" id="payButton">
+                        Pay <span id="payAmount">GH₵0.00</span> with Paystack
+                    </button>
+
+                    <p class="secure-notice">🔒 Your payment information is encrypted and secure</p>
+                </form>
+
+                <div class="order-summary-container">
+                    <div class="order-summary">
+                        <h2 class="summary-title">Order Summary</h2>
+                        <div id="orderItems" class="order-items">
+                            <!-- Items loaded by JavaScript -->
+                        </div>
+                        <div class="summary-totals">
+                            <div class="summary-row">
+                                <span class="summary-label">Subtotal</span>
+                                <span id="summarySubtotal">GH₵0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="summary-label">Shipping</span>
+                                <span>GH₵0.00</span>
+                            </div>
+                            <div class="summary-row summary-total">
+                                <span>Total</span>
+                                <span id="summaryTotal">GH₵0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                © 2026 Priest. All rights reserved.
+            </div>
+        </div>
+    </footer>
+        <!-- Mobile Bottom Navigation (visible only on small screens) -->
+<nav class="bottom-nav-mobile">
+  <div class="nav-items">
+    <a href="index.html" class="nav-item">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 10L12 3L21 10V20H15V14H9V20H3V10Z" />
+      </svg>
+      <span>Home</span>
+    </a>
+     <a href="shop.html" class="nav-item">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M12 16v-4M12 8h.01"/>
+      </svg>
+      <span>Shop</span>
+    </a>
+    <a href="cart.html" class="nav-item">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M9 2L7.17 4H3a1 1 0 00-1 1v12a1 1 0 001 1h18a1 1 0 001-1V5a1 1 0 00-1-1h-4.17L15 2H9z"/>
+        <path d="M9 17v-6M15 17v-6"/>
+      </svg>
+      <span>Cart</span>
+      <span class="cart-count" id="mobileCartCount">0</span>
+    </a>
+    <a href="about.html" class="nav-item">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M12 16v-4M12 8h.01"/>
+      </svg>
+      <span>About</span>
+    </a>
+   
+  </div>
+</nav>
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+<script src="firebase-init.js"></script>   
+<script src="app.js"></script>
+<script src="products.js"></script>
+<script src="checkout.js"></script>
+
+</body>
+</html>

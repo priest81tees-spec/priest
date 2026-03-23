@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIEST - Premium Streetwear T-Shirts</title>
+    <link rel="icon" type="Logo" href="img/logo.jpeg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">PRIEST</a>
+                
+                <div class="nav-links" id="navLinks">
+                    <a href="index.html" class="nav-link active">Home</a>
+                    <a href="shop.html" class="nav-link">Shop</a>
+                    <a href="about.html" class="nav-link">About</a>
+                </div>
+
+                <div class="nav-actions">
+                    <div class="user-menu" id="userMenu">
+                        <button class="user-button" id="userButton">Login</button>
+                        <div class="user-dropdown" id="userDropdown"></div>
+                    </div>
+                    
+                    <a href="cart.html" class="cart-link">
+                        <svg class="cart-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 2L7.17 4H3a1 1 0 00-1 1v12a1 1 0 001 1h18a1 1 0 001-1V5a1 1 0 00-1-1h-4.17L15 2H9z"/>
+                            <path d="M9 17v-6M15 17v-6"/>
+                        </svg>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </a>
+
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="img/WhatsApp Image 2026-03-04 at 7.21.01 PM.jpeg" alt="Hero" class="hero-image">
+            <div class="hero-content">
+                <h1 class="hero-title">PRIEST</h1>
+                <p class="hero-subtitle">Power rises in every street territory. Premium graphic tees for those who lead.</p>
+                <a href="shop.html" class="hero-button">
+                    Shop Collection
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+         <!-- Featured Products -->
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">Our Collection</h2>
+            <div class="product-grid">
+                <a href="product.html?id=1" class="product-card">
+                    <div class="product-image">
+                        <img src="img/white.jpeg" width="250px" height="250px" alt="Priest 81 Tee - White">
+                    </div>
+                    <h3 class="product-name">Priest 81 Tee - White</h3>
+                    <p class="product-price">GhC150</p>
+                </a>
+
+                <a href="product.html?id=2" class="product-card">
+                    <div class="product-image">
+                        <img src="img/Black.jpeg" width="250px" height="250px" alt="Priest 81 Tee - Black">
+                    </div>
+                    <h3 class="product-name">Priest 81 Tee - Black</h3>
+                    <p class="product-price">GhC150</p>
+                </a>
+            </div>
+            <div class="text-center">
+                <a href="shop.html" class="btn btn-secondary">
+                    View All Tees
+                    <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+        <!-- Brand Story -->
+        <section class="brand-story">
+            <div class="container">
+                <div class="brand-grid">
+                    <div class="brand-image">
+                        <img src="https://images.unsplash.com/photo-1643387848945-da63360662f4?w=800&q=80" alt="Brand Story">
+                    </div>
+                    <div class="brand-content">
+                        <h2 class="brand-title">Street Territory Since '81</h2>
+                        <p class="brand-text">
+                            Priest represents more than streetwear—it's a mindset. Born from urban culture and inspired by the power of community, our graphic tees tell stories of resilience, faith, and ambition.
+                        </p>
+                        <p class="brand-text">
+                            Each design is crafted with intention, featuring bold graphics that speak to those who rise above. Premium cotton, detailed prints, and a message that resonates.
+                        </p>
+                        <a href="about.html" class="brand-link">
+                            Learn More About Us
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-content">
+                    <h2 class="newsletter-title">Join the Movement</h2>
+                    <p class="newsletter-subtitle">Subscribe to get early access to new releases, exclusive offers, and style inspiration.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="Enter your email" class="newsletter-input" required>
+                        <button type="submit" class="newsletter-button">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-title">PRIEST</h3>
+                    <p class="footer-text">Premium graphic tees. Power rises in every street territory.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Shop</h4>
+                    <ul class="footer-links">
+                        <li><a href="shop.html">All T-Shirts</a></li>
+                        <li><a href="shop.html">New Releases</a></li>
+                        <li><a href="shop.html">Best Sellers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://wa.me/+233547676604" class="footer-link">Contact Us</a></li>
+                        <li><a href="#" class="footer-link">Shipping</a></li>
+                        <li><a href="#" class="footer-link">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Follow Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.instagram.com/_priest.trill?igsh=bWQ2MjE5bGEzN243" class="footer-link" target="_blank">Instagram</a></li>
+                        <li><a href="https://wa.me/+233547676604" class="footer-link" target="_blank">WhatsApp</a></li>
+                        <li><a href="https://www.tiktok.com/@priest_collections?_r=1&_t=ZS-94mPHnDqxM5" class="footer-link" target="_blank">TikTok</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                © 2026 Priest. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+<nav class="bottom-nav-mobile">
+  <div class="nav-items">
+    <a href="index.html" class="nav-item">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M3 10L12 3L21 10V20H15V14H9V20H3V10Z" />
+      </svg>
+      <span>Home</span>
+    </a>
+     <a href="shop.html" class="nav-item">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M12 16v-4M12 8h.01"/>
+      </svg>
+      <span>Shop</span>
+    </a>
+    <a href="cart.html" class="nav-item">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M9 2L7.17 4H3a1 1 0 00-1 1v12a1 1 0 001 1h18a1 1 0 001-1V5a1 1 0 00-1-1h-4.17L15 2H9z"/>
+        <path d="M9 17v-6M15 17v-6"/>
+      </svg>
+      <span>Cart</span>
+      <span class="cart-count" id="mobileCartCount">0</span>
+    </a>
+    <a href="about.html" class="nav-item">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M12 16v-4M12 8h.01"/>
+      </svg>
+      <span>About</span>
+    </a>
+   
+  </div>
+</nav>
+
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+<script src="firebase-init.js"></script> 
+<script src="app.js"></script>
+<script src="home.js"></script>
+<script src="products.js"></script>
+
+  
+</body>
+</html>
